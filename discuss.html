@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum - Website of Experimental Learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Discussion Forum</h1>
+        <p>Ask questions, share opinions, or discuss topics related to experimental learning.</p>
+    </header>
+
+    <!-- Discussion Section -->
+    <main>
+        <section id="discussion-form">
+            <h2>Submit Your Question or Opinion</h2>
+            <form id="questionForm">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName" required>
+
+                <label for="userQuestion">Your Question or Opinion:</label>
+                <textarea id="userQuestion" name="userQuestion" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="discussion-thread">
+            <h2>Discussion Thread</h2>
+            <div id="comments"></div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Website of Experimental Learning | Created with guidance from ChatGPT</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="Content.html">Index</a>
+        </nav>
+    </footer>
+
+    <!-- JavaScript for Comment Handling -->
+    <script>
+        // Handle form submission and display comments
+        document.getElementById("questionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get user input values
+            const userName = document.getElementById("userName").value;
+            const userQuestion = document.getElementById("userQuestion").value;
+
+            // Create a new comment element
+            const commentContainer = document.createElement("div");
+            commentContainer.classList.add("comment");
+
+            const commentHeader = document.createElement("h3");
+            commentHeader.textContent = userName;
+
+            const commentText = document.createElement("p");
+            commentText.textContent = userQuestion;
+
+            // Create reply input and button for responses
+            const replyInput = document.createElement("input");
+            replyInput.type = "text";
+            replyInput.placeholder = "Your reply...";
+            replyInput.classList.add("reply-input");
+
+            const replyButton = document.createElement("button");
+            replyButton.textContent = "Reply";
+            replyButton.classList.add("reply-button");
+
+            // Event listener for adding replies
+            replyButton.addEventListener("click", () => {
+                const replyText = replyInput.value.trim();
+                if (replyText !== "") {
+                    const replyContainer = document.createElement("div");
+                    replyContainer.classList.add("reply");
+                    replyContainer.textContent = "Reply: " + replyText;
+                    commentContainer.appendChild(replyContainer);
+                    replyInput.value = ""; // Clear reply input
+                }
+            });
+
+            // Append elements to the comment container
+            commentContainer.appendChild(commentHeader);
+            commentContainer.appendChild(commentText);
+            commentContainer.appendChild(replyInput);
+            commentContainer.appendChild(replyButton);
+
+            // Add the new comment to the comments section
+            document.getElementById("comments").appendChild(commentContainer);
+
+            // Clear form input
+            document.getElementById("userName").value = "";
+            document.getElementById("userQuestion").value = "";
+        });
+    </script>
+</body>
+</html>

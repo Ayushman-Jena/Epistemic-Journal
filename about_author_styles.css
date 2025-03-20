@@ -1,0 +1,28 @@
+.author-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto; /* Center the photo and add spacing */
+}
+
+#author-details {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#author-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#author-links li {
+    margin: 5px 0;
+}
+
+#author-links a {
+    color: #007acc; /* Adjust color as needed */
+    text-decoration: none;
+}

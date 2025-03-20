@@ -1,0 +1,156 @@
+/* Overall Layout */
+body { 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+   /* background-image: linear-gradient(#e0e0e0 1px, transparent 1px), */
+   /*                   linear-gradient(90deg, #e0e0e0 1px, transparent 1px); */
+    background-size: 20px 20px;
+    background-position: center;
+    color: #333;
+}
+
+
+.centered-box {
+    max-width: 1000px; /* Limit the width of the box */
+    margin: 50px auto; /* Center the box horizontally and add vertical spacing */
+    padding: 20px; /* Add padding inside the box */
+    border: 2px solid #ccc; /* Add a border around the box */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9ff; /* Optional: light bluish background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    text-align: justify; /* Ensure the text inside is justified */
+    line-height: 1.6; /* Improve readability */
+    font-family: Arial, sans-serif; /* Optional: consistent font styling */
+}
+
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+/* Header and Footer */
+header, footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #555;
+}
+
+
+
+/* Add this to your styles.css file */
+#photo-gallery {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+}
+
+.photo-grid img {
+    max-width: 300px; /* Adjust the maximum width to minimize images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: rounded corners */
+    object-fit: cover; /* Ensures the image fills the dimensions neatly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+#archive {
+    display: flex;
+    justify-content: space-between; /* Distributes space between categories and archive */
+    gap: 20px; /* Adds spacing between them */
+}
+
+#archive > div {
+    flex: 1; /* Ensures both sections take equal width */
+}
+
+
+/* Section Styling */
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #222;
+    letter-spacing: 0.5px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Links and Buttons */
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Button Strip - Vertical Button Column on the Right */
+.button-strip {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20%;
+    right: 20px;
+    gap: 10px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-strip button {
+    padding: 8px 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.button-strip button:hover {
+    background-color: #004494;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.75em;
+    }
+}
