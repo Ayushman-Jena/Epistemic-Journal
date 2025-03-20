@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piezoelectric Tensors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Piezoelectric Tensors in Material Science</h1>
+        <p>Understanding the role of <a href="C:\Users\AJSCIENCE\Desktop\Blog_site_source\Source_code\Blog_post_database\Tensors.html">Tensors</a>in piezoelectric behavior</p>
+    </header>
+    <main>
+        <article>
+            <h2>1. Piezoelectric Strain and Stress Relations</h2>
+            <p>The core piezoelectric behavior is governed by two constitutive equations that describe how mechanical and electrical quantities interact:</p>
+            
+            <h3>Direct Piezoelectric Effect (Charge Generation)</h3>
+            <p>
+                \[
+                D_i = d_{ijk} T_{jk} + \varepsilon_{ij} E_j
+                \]
+            </p>
+            <ul>
+                <li><b>D<sub>i</sub></b>: Electric displacement field (vector)</li>
+                <li><b>d<sub>ijk</sub></b>: Piezoelectric strain tensor (third-order tensor)</li>
+                <li><b>T<sub>jk</sub></b>: Stress tensor (second-order tensor)</li>
+                <li><b>ε<sub>ij</sub></b>: Permittivity tensor (second-order tensor)</li>
+                <li><b>E<sub>j</sub></b>: Electric field (vector)</li>
+            </ul>
+
+            <h3>Inverse Piezoelectric Effect (Strain Generation)</h3>
+            <p>
+                \[
+                S_{ij} = s_{ijkl} T_{kl} + d_{kij} E_k
+                \]
+            </p>
+            <ul>
+                <li><b>S<sub>ij</sub></b>: Strain tensor (second-order tensor)</li>
+                <li><b>s<sub>ijkl</sub></b>: Elastic compliance tensor (fourth-order tensor)</li>
+            </ul>
+
+            <h2>2. Tensors in Material Properties</h2>
+            <p>Tensors define various material properties:</p>
+            <ul>
+                <li><b>Elasticity Tensor</b> \(s_{ijkl}\) (4th order) relates stress and strain.</li>
+                <li><b>Piezoelectric Tensor</b> \(d_{ijk}\) (3rd order) couples mechanical and electrical fields.</li>
+                <li><b>Dielectric Permittivity Tensor</b> \(\varepsilon_{ij}\) (2nd order) describes how the material stores electrical energy.</li>
+            </ul>
+
+            <h2>3. Simplifications Using Voigt Notation</h2>
+            <p>Instead of using full tensor notation, Voigt notation compresses indices for practical computations.</p>
+            <p>Example: \(d_{ijk}\) is written as a \(3 \times 6\) matrix instead of a full 3rd-order tensor.</p>
+
+            <h2>4. Tensor Symmetries</h2>
+            <p>
+                - <b>Elastic Tensor</b>: Due to material symmetry, many components of \(s_{ijkl}\) are zero or equal.<br>
+                - <b>Piezoelectric Tensor</b>: Limited by crystal symmetry; e.g., for a 6mm symmetry (PZT), only specific components like \(d_{31}\), \(d_{33}\), and \(d_{15}\) exist.
+            </p>
+
+            <h2>5. Finite Element Modeling (FEM)</h2>
+            <p>Piezoelectric behavior in FEM uses tensorial relations to solve coupled electro-mechanical equations. Software like COMSOL, ANSYS, and Abaqus employ these tensor formulations to simulate piezoelectric devices.</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Experimental Learning Blog | Created by Ayushman Jena</p>
+    </footer>
+</body>
+</html>
